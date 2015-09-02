@@ -99,7 +99,7 @@
 		if ( $.isArray( previousLanguages ) ) {
 			// Migrate data from cookie to localStorage.
 			mw.uls.setPreviousLanguages( previousLanguages );
-			$.removeCookie( mw.uls.previousLanguagesStorageKey );
+			$.removeCookie( mw.uls.previousLanguagesStorageKey, { path: '/' } );
 		} else {
 			previousLanguages = [];
 		}
